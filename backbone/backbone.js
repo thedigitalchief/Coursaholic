@@ -1,31 +1,27 @@
 //     Backbone.js 1.0.0
-
-//     (c) 2010-2013 Jeremy Ashkenas, DocumentCloud Inc.
-//     Backbone may be freely distributed under the MIT license.
-//     For all details and documentation:
+//     (c) Jeremy Ashkenas, DocumentCloud Inc. Backbone may be freely distributed under the MIT license.
 //     http://backbonejs.org
 
 (function(){
 
-  // Initial Setup
-  // -------------
+  // ----------Initial Setup--------------
 
-  // Save a reference to the global object (`window` in the browser, `exports`
-  // on the server).
+  // Save a reference to the global object (`window` in the browser, "exports" on server)
   var root = this;
 
   // Save the previous value of the `Backbone` variable, so that it can be
   // restored later on, if `noConflict` is used.
   var previousBackbone = root.Backbone;
 
-  // Create local references to array methods we'll want to use later.
+  // Create local references to array methods we'll wanna use later
   var array = [];
   var push = array.push;
   var slice = array.slice;
   var splice = array.splice;
 
-  // The top-level namespace. All public Backbone classes and modules will
-  // be attached to this. Exported for both the browser and the server.
+  // top-level namespace
+  // All public Backbone classes and modules will be attached  
+  // Exported for both  browser and server
   var Backbone;
   if (typeof exports !== 'undefined') {
     Backbone = exports;
@@ -33,10 +29,10 @@
     Backbone = root.Backbone = {};
   }
 
-  // Current version of the library. Keep in sync with `package.json`.
+  // Current version of the library, keep in sync with `package.json`
   Backbone.VERSION = '1.0.0';
 
-  // Require Underscore, if we're on the server, and it's not already present.
+  // Require Underscore, if we're on the server and it's not already present
   var _ = root._;
   if (!_ && (typeof require !== 'undefined')) _ = require('underscore');
 
@@ -62,8 +58,7 @@
   // form param named `model`.
   Backbone.emulateJSON = false;
 
-  // Backbone.Events
-  // ---------------
+  // ------------Backbone.Events--------------
 
   // A module that can be mixed in to *any object* in order to provide it with
   // custom events. You may bind with `on` or remove with `off` callback
@@ -74,7 +69,8 @@
   //     _.extend(object, Backbone.Events);
   //     object.on('expand', function(){ alert('expanded'); });
   //     object.trigger('expand');
-  //
+  
+
   var Events = Backbone.Events = {
 
     // Bind an event to a `callback` function. Passing `"all"` will bind
@@ -112,7 +108,9 @@
         return this;
       }
 
+
       names = name ? [name] : _.keys(this._events);
+
       for (i = 0, l = names.length; i < l; i++) {
         name = names[i];
         if (events = this._events[name]) {
@@ -148,8 +146,7 @@
       return this;
     },
 
-    // Tell this object to stop listening to either specific events ... or
-    // to every object it's currently listening to.
+    // Tell this object to stop listening to either specific events ... or to every object it's currently listening to.
     stopListening: function(obj, name, callback) {
       var listeners = this._listeners;
       if (!listeners) return this;
@@ -164,6 +161,7 @@
     }
 
   };
+
 
   // Regular expression used to split event strings.
   var eventSplitter = /\s+/;
@@ -232,14 +230,14 @@
   // want global "pubsub" in a convenient place.
   _.extend(Backbone, Events);
 
-  // Backbone.Model
-  // --------------
+  // -------- Backbone.Model ------
 
   // Backbone **Models** are the basic data object in the framework --
   // frequently representing a row in a table in a database on your server.
   // A discrete chunk of data and a bunch of useful, related methods for
   // performing computations and transformations on that data.
 
+  
   // Create a new model with the specified attributes. A client id (`cid`)
   // is automatically generated and assigned for you.
   var Model = Backbone.Model = function(attributes, options) {
