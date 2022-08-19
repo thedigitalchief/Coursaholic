@@ -13,7 +13,7 @@ body {
 }
 
 a {
-	color: rgb(0,100,200);
+	color: rgb(12, 49, 86);
 	text-decoration: none;
 }
 
@@ -63,12 +63,12 @@ button:focus {
 }
 
 :root {
-    --gray0: #f8f8f8;
-    --gray1: #dbe1e8;
-    --gray2: #b2becd;
-    --gray3: #6c7983;
-    --gray4: #454e56;
-    --gray5: #2a2e35;
+    --gray0: #FFFFFF;
+    --gray1: #ffffff;
+    --gray2: #ffffff;
+    --gray3: #ffffff;
+    --gray4: #141b1e;
+    --gray5: #12181b;
     --gray6: #12181b;
     --blue: #00316E;
     --purple: #3000a1;
