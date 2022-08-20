@@ -2171,7 +2171,7 @@ var app = (function () {
                     (D = x("div")),
                     be.c(),
                     (M = z()),
-                    (B = x("h1")),
+                    (B = x("h2")),
                     (B.textContent = "Clear All"),
                     (F = z()),
                     (H = x("div")),
