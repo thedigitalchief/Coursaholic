@@ -1,15 +1,8 @@
 /*
-
 @license
 dhtmlxScheduler v.5.3.10 Standard
 
-To use dhtmlxScheduler in non-GPL projects (and get Pro version of the product), please obtain Commercial/Enterprise or Ultimate license on our site https://dhtmlx.com/docs/products/dhtmlxScheduler/#licensing or contact us at sales@dhtmlx.com
-
-(c) XB Software Ltd.
-
-*/
-/* key nav */
-/*                                              Table of Content
+/* Table of Content
 
 
 
@@ -20,7 +13,6 @@ To use dhtmlxScheduler in non-GPL projects (and get Pro version of the product),
         3. Diagram Editor MicroVars
 
         4. Property Sheet MicroVars
-
 
 
 */
@@ -103,7 +95,7 @@ To use dhtmlxScheduler in non-GPL projects (and get Pro version of the product),
   box-shadow: 0px 0px 14px #888;
   border: 1px solid #ffffff;
   z-index: 18;
-  border-radius: 6px;
+  border-radius: 9px;
   font-family: "Tahoma", san-serif;
 }
 .dhtmlx_popup_text {
@@ -111,11 +103,11 @@ To use dhtmlxScheduler in non-GPL projects (and get Pro version of the product),
   font-size: 14px;
   color: #000;
   min-height: 30px;
-  border-radius: 6px;
+  border-radius: 9px;
 }
 .dhtmlx_popup_title {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   border-width: 0px;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAoCAMAAAAIaGBFAAAAhFBMVEVwcHBubm5sbGxqampoaGhmZmZlZWVjY2NhYWFfX19dXV1bW1taWlpYWFhWVlZUVFRSUlJRUVFPT09NTU1LS0tJSUlHR0dGRkZERERCQkJAQEA+Pj49PT09PT0+Pj5AQEBBQUFDQ0NERERGRkZHR0dJSUlKSkpMTExMTEw5OTk5OTk5OTkny8YEAAAAQklEQVQImQXBCRJCAAAAwKVSQqdyjSPXNP7/QLsIhA6OTiJnF7GrRCpzc/fw9PKW+/gqlCq1RqvTG/yMJrPF6m/bAVEhAxxnHG0oAAAAAElFTkSuQmCC);
   background-image: -webkit-linear-gradient(top, #707070 1%, #3d3d3d 70%, #4c4c4c 97%, #393939 97%);
@@ -133,7 +125,7 @@ To use dhtmlxScheduler in non-GPL projects (and get Pro version of the product),
   overflow: hidden;
 }
 .dhtmlx_popup_controls {
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 5px 5px 9px 5px;
 }
 .dhtmlx_popup_button,
@@ -142,7 +134,7 @@ To use dhtmlxScheduler in non-GPL projects (and get Pro version of the product),
   line-height: 28px;
   display: inline-block;
   margin: 0 5px;
-  border-radius: 6px;
+  border-radius: 10px;
   color: #FFF;
   border: 1px solid #838383;
   box-shadow: none;
@@ -156,7 +148,7 @@ To use dhtmlxScheduler in non-GPL projects (and get Pro version of the product),
   border: 1px solid #FFF;
   background: #ffffff;
   background-image: none;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 15px;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -170,15 +162,15 @@ To use dhtmlxScheduler in non-GPL projects (and get Pro version of the product),
   line-height: 28px;
 }
 .dhtmlx_popup_button.dhtmlx_ok_button div {
-  background: #22A1BC;
-  border: 1px solid #22A1BC;
+  background: ##00316E;
+  border: 1px solid ##00316E;
   color: white;
   text-shadow: 0px -1px 0px #6F6F6F;
   outline: none;
 }
 .dhtmlx_popup_button.dhtmlx_ok_button {
-  border: 1px solid #22A1BC;
-  background-color: #22A1BC;
+  border: 1px solid ##00316E;
+  background-color: ##00316E;
   outline: none;
 }
 .dhtmlx_button input:focus,
@@ -220,7 +212,7 @@ div.dhx_modal_cover {
 }
 .dhtmlx-alert-error,
 .dhtmlx-confirm-error {
-  border: 1px solid #ff0000;
+  border: 1px solid ##00316E;
 }
 /*Skin section*/
 .dhtmlx_popup_title {
@@ -237,23 +229,23 @@ div.dhx_modal_cover {
   box-shadow: 0px 0px 10px #888;
   padding: 0px;
   background-color: #FFF;
-  border-radius: 3px;
+  border-radius: 7px;
   border: 1px solid #ffffff;
 }
 .dhtmlx-info div {
   padding: 5px 10px 5px 10px;
   background-color: #FFF;
-  border-radius: 3px;
+  border-radius: 7px;
   border: 1px solid #b8b8b8;
 }
 .dhtmlx_message_area .dhtmlx-error {
-  background-color: #d81b1b;
-  border: 1px solid #ff3c3c;
+  background-color: #00316E;
+  border: 1px solid #023b81;
   box-shadow: 0px 0px 10px #000;
 }
 .dhtmlx_message_area .dhtmlx-error div {
-  background-color: #d81b1b;
-  border: 1px solid #940000;
+  background-color: #013c84;
+  border: 1px solid #00316E;
   color: #FFF;
 }
 .dhtmlx_modal_box.dhtmlx-error .dhtmlx_popup_title {
@@ -285,7 +277,7 @@ div.dhx_modal_cover {
   height: 12px;
   border-width: 1px 1px 0 1px;
   border-bottom-style: dotted;
-  border-radius: 4px 4px 0 0;
+  border-radius: 7px 7px 0 0;
   font-size: 12px;
   line-height: 12px;
   font-weight: bold;
@@ -330,15 +322,15 @@ div.dhx_modal_cover {
   border-width: 0;
   position: relative;
   top: auto;
-  background: #1796b0 url(imgs_dhx_terrace/resizing.png) no-repeat center center;
+  background: #00316E url(imgs_dhx_terrace/resizing.png) no-repeat center center;
 }
 .dhx_cal_event .dhx_resize_denied.dhx_event_resize.dhx_footer {
   height: 0;
 }
 .dhx_cal_event_line {
-  background-color: #1796b0;
+  background-color: #00316E;
   border: 1px solid transparent;
-  border-radius: 2px;
+  border-radius: 8px;
   font-family: "Arial", san-serif;
   font-size: 12px;
   font-weight: normal;
@@ -357,16 +349,16 @@ div.dhx_modal_cover {
   border-bottom-left-radius: 9px;
 }
 .dhx_cal_container_rtl .dhx_cal_event_line_start {
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 .dhx_cal_event_line_end {
   border-top-right-radius: 9px;
   border-bottom-right-radius: 9px;
 }
 .dhx_cal_container_rtl .dhx_cal_event_line_end {
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 .dhx_cal_container_rtl .dhx_cal_event_line_start {
   border-top-right-radius: 9px;
@@ -390,7 +382,7 @@ div.dhx_modal_cover {
   font-weight: normal;
 }
 .dhx_cal_event.dhx_cal_editor {
-  border: 1px solid #1796b0;
+  border: 1px solid #00316E;
   border-top-style: solid;
   z-index: 10;
   position: absolute;
@@ -511,7 +503,7 @@ div.icon_delete {
 .dhx_cal_light {
   -webkit-tap-highlight-color: transparent;
   background-color: #FFFFFF;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid #CECECE;
   color: #2E2E2E;
   font-family: "Tahoma", san-serif;
@@ -681,7 +673,7 @@ div.icon_delete {
   margin: 12px 0 0 20px;
   font-size: 12px;
   font-weight: bold;
-  border-radius: 3px;
+  border-radius: 7px;
   text-transform: none;
   color: #747473;
 }
@@ -734,7 +726,7 @@ div.icon_delete {
   border: 1px solid #cecece;
   color: #FFFFFF;
   text-shadow: 0px -1px 0px #6F6F6F;
-  background-color: #22A1BC;
+  background-color: #00316E;
 }
 .dhx_cal_cover {
   width: 100%;
@@ -802,11 +794,11 @@ div.icon_delete {
   float: right;
   height: 21px;
   width: 90px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
 }
 .dhx_cal_light_wide .dhx_custom_button {
   position: absolute;
@@ -1810,14 +1802,14 @@ div.icon_delete {
 /* now time */
 .dhx_now_time {
   width: 100%;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid #00316E;
 }
 .dhx_scheduler_month .dhx_now_time {
   border-bottom: 0;
-  border-left: 2px solid red;
+  border-left: 2px solid #00316E;
 }
 .dhx_matrix_now_time {
-  border-left: 2px solid red;
+  border-left: 2px solid #00316E;
 }
 .dhx_now_time,
 .dhx_matrix_now_time {
@@ -1827,7 +1819,7 @@ div.icon_delete {
 /* Quick info */
 .dhx_cal_quick_info {
   border: 2px solid #888;
-  border-radius: 5px;
+  border-radius: 10px;
   position: absolute;
   z-index: 8;
   font-family: "Tahoma", san-serif;
@@ -1891,7 +1883,7 @@ div.icon_delete {
   background-color: #1796b0;
   border-bottom: 1px solid #666;
   border-right: 1px solid #666;
-  border-radius: 3px;
+  border-radius: 6px;
   line-height: 20px;
   color: #FFFFFF;
   vertical-align: middle;
@@ -2119,7 +2111,7 @@ div.icon_delete {
   height: 30px;
   width: 46px;
   border: 1px solid #CECECE;
-  border-radius: 5px 0 0 5px;
+  border-radius: 8px 0 0 8px;
 }
 .dhx_cal_today_button {
   cursor: pointer;
@@ -2135,7 +2127,7 @@ div.icon_delete {
   height: 30px;
   width: 80px;
   border: 1px solid #CECECE;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
   text-transform: none;
 }
@@ -2149,7 +2141,7 @@ div.icon_delete {
   height: 30px;
   width: 46px;
   border: 1px solid #CECECE;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 8px 8px 0;
 }
 .dhx_cal_tab {
   width: 60px;
@@ -2718,9 +2710,9 @@ div.dhx_menu_icon {
   text-shadow: 0px 1px 0px white;
 }
 .dhx_cal_tab_standalone {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px!important;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px!important;
   padding: 0 5px;
 }
 /* navigation End */
@@ -2778,7 +2770,7 @@ div.dhx_menu_icon {
   box-sizing: border-box;
   border: 1px solid #CECECE;
   box-shadow: 2px 2px 5px #CCC;
-  border-radius: 3px;
+  border-radius: 10px;
 }
 .dhx_mini_calendar .dhx_year_month {
   border: 1px solid #CECECE;
@@ -2975,7 +2967,7 @@ div.dhx_menu_icon {
 }
 .dhx_mini_calendar .dhx_year_event,
 .dhx_mini_calendar .dhx_calendar_click {
-  border-radius: 7px;
+  border-radius: 10px;
 }
 .dhx_mini_calendar .dhx_month_head {
   margin: 2px 2px;
