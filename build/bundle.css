@@ -148,7 +148,7 @@ h1.svelte-ittju3.svelte-ittju3 {
 	line-height: inherit;
 	text-transform: uppercase;
 	display: inline-block;
-	font-size: 3.4em;
+	font-size: 3em;
 	font-weight: 800;
 	position: absolute;
 	left: .5em;
@@ -160,7 +160,7 @@ h1.svelte-ittju3.svelte-ittju3 {
 }
 
 .dark.svelte-ittju3 h1.svelte-ittju3 {
-	color: #00316E
+	color: #134788
 }
 
 #header.svelte-ittju3.svelte-ittju3 {
@@ -202,7 +202,7 @@ span.svelte-ittju3.svelte-ittju3 {
 }
 
 span.svelte-ittju3.svelte-ittju3:hover {
-	color: #0a55b1 !important
+	color: #134788 !important
 }
 
 @media(max-width: 950px) {

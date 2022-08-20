@@ -69,11 +69,12 @@ button:focus {
 :root {
     --gray0: #FFFFFF;
     --gray1: #ffffff;
-    --gray2: #ffffff;
-    --gray3: #ffffff;
-    --gray4: #141b1e;
-    --gray5: #12181b;
-    --gray6: #12181b;
+    --gray2: #ffffffff;
+    --gray3: #c8c8c8;
+--gray3: #6c7983;
+	--gray4: #020101;
+	--gray5: #2a2e35;
+	--gray6: #6e7376;
     --blue: #00316E;
     --purple: #3000a1;
     --yellow: #fff565;
