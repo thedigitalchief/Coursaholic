@@ -1,8 +1,6 @@
-# Coursaholic - The Best Course PLanner & Scheduler
+# Coursaholic - The Best Course Scheduler & Reviews
+
+- https://coursaholic.io
 
 ## Objective
 
-
-## Installation
-
-- yarn
