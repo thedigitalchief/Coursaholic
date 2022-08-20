@@ -34,14 +34,25 @@ span.svelte-1iveuxb {
 
 .toggle.svelte-1iveuxb {
 	cursor: pointer
+	border-width: 7px;
+	border-style: solid;
+	border-radius: 15px;
+	position: relative;
+			margin: 0.5em;
+			padding: 0.3em 0.5em 0.3em 0.5em;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+			min-height: 2em;
+
 }
 
 .light.svelte-1iveuxb {
 	color: #1763c1
+	border-color: #FF0000;
 }
 
 .dark.svelte-1iveuxb {
 	color: #255c9f
+	border-color: #FF0000;
 }
 
 p.svelte-1iveuxb {
@@ -81,7 +92,7 @@ select.dark.svelte-1iveuxb {
 
 select.light.svelte-1iveuxb {
 	border: 2.5px solid var(--gray4);
-	background-color: #f1f1f1);
+	background-color: #f1f1f1;
 }
 
 @media(max-width: 1024px) {

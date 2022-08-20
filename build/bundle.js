@@ -935,15 +935,13 @@ var app = (function () {
                     (v.textContent = ") information will be available in: "),
                     (b = x("span")),
                     
-             
-                
 
                     ($ = S(e[4])),
                     (R = z()),
                     (O = x("hr")),
                     (j = z()),
-                    (I = x("p")),
-                    (I.textContent = "Welcome to Coursaholic - the best course reviews and scheduler. Initially developed for the lovely students of University of California, Riverside. \r\n   More schools coming very soon."),
+                    (I = x("h2")),
+                    (I.textContent = "Welcome to Coursaholic - the best course reviews and planner. "),
                     (Z = z()),
                     (T = x("footer")),
                     (U = x("span")),
