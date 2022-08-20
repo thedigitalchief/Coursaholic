@@ -21,7 +21,15 @@ body.dark.svelte-wqrz4a {
 
 div.svelte-1iveuxb {
 	max-width: 90%;
-	margin: 1em auto
+	margin: 1.4em auto
+}
+
+h1.svelte-1iveuxb {
+	max-width: 90%;
+	font-weight: 700;
+	font-size: 40px;
+	margin: 1.8em auto
+
 }
 
 span.svelte-1iveuxb {
@@ -33,11 +41,11 @@ span.svelte-1iveuxb {
 }
 
 .toggle.svelte-1iveuxb {
-	cursor: default;
-	font-size: 0.7em;
-	border-width: 7px;
+	cursor: pointer;
+	font-size: 1.2em;
+	border-width: 4px;
 	border-style: solid;
-	border-radius: 15px;
+	border-radius: 12px;
 	position: relative;
 	margin: 0.3em;
 	padding: 0.2em 0.5em 0.2em 0.5em;
@@ -65,12 +73,12 @@ p.svelte-1iveuxb {
 }
 
 select.svelte-1iveuxb {
-	font-size: 1.5em;
-	font-weight: 550;
+	font-size: 1.2em;
+	font-weight: 700;
 	appearance: none;
 	background-color: transparent;
 	border: none;
-	padding: 0 1em 0 0;
+	padding: 0 2em 0 0;
 	margin-left: 0.25em;
 	margin-bottom: 0;
 	outline: none;
@@ -85,13 +93,13 @@ select.svelte-1iveuxb {
 
 select.dark.svelte-1iveuxb {
 	border: 3px solid var(--gray2);
-	border-radius: 11px;
+	border-radius: 10px;
 	background-color: #f1f1f1f1
 }
 
 select.light.svelte-1iveuxb {
 	border: 3px solid var(--gray4);
-	border-radius: 11px;
+	border-radius:10px;
 	background-color: #f1f1f1f1;
 }
 
@@ -560,9 +568,11 @@ h2.svelte-nac83n.svelte-nac83n {
 h1.svelte-ocnj07.svelte-ocnj07 {
 	font-size: 2em;
 	font-weight: 100;
+	text-align: center;
 	margin-top: 0;
 	top: 100px;
 	margin-bottom: 10px
+
 }
 
 .inpnum.svelte-ocnj07.svelte-ocnj07 {
