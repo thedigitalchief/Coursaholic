@@ -196,14 +196,14 @@ span.svelte-ittju3.svelte-ittju3 {
 	-moz-transition: border-color 0.4s ease-in-out, color 0.4s ease-in-out;
 	-webkit-transition: border-color 0.4s ease-in-out, color 0.5s ease-in-out;
 	-ms-transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out;
-	transition: border-color 0.5s ease-in-out, color 0.5s ease-in-out;
+	transition: border-color 0.4s ease-in-out, color 0.5s ease-in-out;
 	font-size: 1.8em;
 	font-weight: 1000;
 	cursor: pointer
 }
 
 span.svelte-ittju3.svelte-ittju3:hover {
-	color: #134788 !important
+	color: #005bc9 !important
 }
 
 @media(max-width: 950px) {
@@ -307,7 +307,7 @@ h2.svelte-nac83n.svelte-nac83n {
 
 .svelte-nac83n.svelte-nac83n {
 	text-align: center;
-	transition: 0.15s
+	transition: 0.25s
 }
 
 .options.svelte-nac83n label.svelte-nac83n {
@@ -775,7 +775,7 @@ button.add.svelte-jytgrh {
 	margin: .5em auto;
 	font-weight: bold;
 	border: 1px solid black;
-	background: #0a55b1;
+	background: #01316b;
 	display: inline-block;
 	padding: 1em .5em;
 	border: 0;
@@ -1070,7 +1070,8 @@ textarea.svelte-1c50q0u {
 	box-sizing: border-box;
 	-webkit-transform: translateY(-10px);
 	transform: translateY(-10px);
-	-webkit-transition: opacity .1s ease, -webkit-transform .2s ease;
+	-webkit-transition: opacity .1s ease, 
+	-webkit-transform .2s ease;
 	transition: opacity .1s ease, -webkit-transform .2s ease;
 	transition: transform .2s ease, opacity .1s ease;
 	transition: transform .2s ease, opacity .1s ease, -webkit-transform .2s ease;
@@ -1080,7 +1081,7 @@ textarea.svelte-1c50q0u {
 }
 
 .pin.selected.svelte-7q33q5.svelte-7q33q5 {
-	color: #0a55b1
+	color: #0a376f
 }
 
 .pin.selected.showPulse.svelte-7q33q5 .icon.svelte-7q33q5 {

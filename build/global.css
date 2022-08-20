@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-	/* color: #333; */
+	/*color: #333; */
 	margin: 0;
 	/* padding: 8px; */
 	box-sizing: border-box;
@@ -26,7 +26,7 @@ a:hover {
 }
 
 a:visited {
-	color: rgb(0,80,160);
+	color: rgb(2, 53, 104);
 }
 
 label {
@@ -72,10 +72,10 @@ button:focus {
     --gray2: #ffffff;
     --gray3: #c8c8c8;
 	--gray3: #6c7983;
-	--gray4: #0e0e0e;
+	--gray4: #020202;
 	--gray5: #2a2e35;
 	--gray6: #16181a;
-    --blue: #00316E;
+    --blue: #064189;
     --purple: #3000a1;
     --yellow: #fff565;
 }
