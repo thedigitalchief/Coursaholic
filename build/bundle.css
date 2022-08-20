@@ -33,8 +33,8 @@ span.svelte-1iveuxb {
 }
 
 .toggle.svelte-1iveuxb {
-	cursor: pointer
-	font-size: 1.8rm;
+	cursor: default;
+	font-size: 0.7em;
 	border-width: 7px;
 	border-style: solid;
 	border-radius: 15px;
@@ -59,8 +59,8 @@ p.svelte-1iveuxb {
 	justify-content: center;
 	text-align: center;
 	max-width: 65%;
-	font-weight: 300;
-	font-size: 1.4em;
+	font-weight: 200;
+	font-size: 1em;
 	line-height: 1.5em
 }
 
@@ -127,7 +127,7 @@ select.light.svelte-1iveuxb {
 	}
 
 	span.svelte-1iveuxb {
-		font-size: 1.25em
+		font-size: 1.15em
 	}
 
 	select.svelte-1iveuxb {
@@ -153,15 +153,15 @@ h1.svelte-ittju3.svelte-ittju3 {
 	font-weight: 800;
 	position: absolute;
 	left: .5em;
-	margin: 
+	margin: 0;
 }
 
 .light.svelte-ittju3 h1.svelte-ittju3 {
-	color: #134788
+	color: #013471
 }
 
 .dark.svelte-ittju3 h1.svelte-ittju3 {
-	color: #134788
+	color: #023a7e
 }
 
 #header.svelte-ittju3.svelte-ittju3 {
@@ -203,7 +203,7 @@ span.svelte-ittju3.svelte-ittju3 {
 }
 
 span.svelte-ittju3.svelte-ittju3:hover {
-	color: #005bc9 !important
+	color: #04336e !important
 }
 
 @media(max-width: 950px) {
@@ -380,7 +380,7 @@ h2.svelte-nac83n.svelte-nac83n {
 	cursor: pointer;
 	font-weight: bold;
 	border: 1px solid black;
-	background: #ffffff;
+	background: #f1f1f1f1;
 	padding: .3em .2em;
 	border: 0;
 	border-radius: .4em
