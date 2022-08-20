@@ -1,3 +1,5 @@
+//Copyright (©) 2022. Coursaholic, Dylan Nguyen, thedigitalchief, and subsidaries. All rights reserved.
+
 var app = (function () {
     "use strict";
     function t() {}
@@ -916,23 +918,23 @@ var app = (function () {
             c() {
                 (n = x("div")),
                     (s = x("span")),
-                    (s.textContent = "Current term:"),
+                    (s.textContent = "UCR Current term:"),
                     (i = z()),
                     q && q.c(),
                     (a = z()),
                     (r = x("div")),
                     (o = x("span")),
-                    (o.textContent = "UCR undergraduate 17 unit maximum lifted in: "),
+                    (o.textContent = "Undergraduate 17 unit maximum lifted in: "),
                     (l = x("span")),
                     (c = S(e[2])),
                     (h = z()),
                     (f = x("div")),
                     (_ = x("span")),
-                    (_.textContent = "Next UCR term ("),
+                    (_.textContent = "Next term ("),
                     (g = x("span")),
                     (m = S(e[4])),
                     (v = x("span")),
-                    (v.textContent = ") information will be available in: "),
+                    (v.textContent = ") info will be available in: "),
                     (b = x("span")),
                     
 
@@ -941,7 +943,7 @@ var app = (function () {
                     (O = x("hr")),
                     (j = z()),
                     (I = x("h1")),
-                    (I.textContent = "Welcome to Coursaholic - the best course reviews and planner "),
+                    (I.textContent = "Coursaholic - The best course reviews and planner. "),
                     (Z = z()),
                     (T = x("footer")),
                     (U = x("span")),
@@ -2171,7 +2173,7 @@ var app = (function () {
                     (D = x("div")),
                     be.c(),
                     (M = z()),
-                    (B = x("h1")),
+                    (B = x("h2")),
                     (B.textContent = "Clear All"),
                     (F = z()),
                     (H = x("div")),
