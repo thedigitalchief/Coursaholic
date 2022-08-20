@@ -1,3 +1,5 @@
+//Copyright (©) 2022. Coursaholic, Dylan Nguyen, thedigitalchief, and subsidaries. All rights reserved.
+
 var app = (function () {
     "use strict";
     function t() {}
