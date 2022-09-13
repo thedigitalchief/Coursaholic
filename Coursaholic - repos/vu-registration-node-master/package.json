@@ -1,0 +1,20 @@
+{
+  "name": "vu-registration-node",
+  "version": "0.0.1",
+  "description": "",
+  "main": "vu-registration.js",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "fs-extra": "^4.0.3",
+    "jsonic": "^0.3.1",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5",
+    "sleep-promise": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yunyu",
+  "license": "UNLICENSED"
+}

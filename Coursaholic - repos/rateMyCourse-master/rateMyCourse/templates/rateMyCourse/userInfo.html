@@ -1,0 +1,273 @@
+{% extends '../rateMyCourse/base.html' %}
+{% block title %}个人信息 - {{ block.super }}{% endblock %}
+{% block content %}
+<style type="text/css">
+    #hor-minimalist-b
+    {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+        font-size: 18px;
+        background: #fff;
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+    }
+    #hor-minimalist-b th
+    {
+        font-size: 19px;
+        font-weight: normal;
+        color: #039;
+        padding: 10px 8px;
+        border-bottom: 2px solid #6678b1;
+    }
+    #hor-minimalist-b td
+    {
+        border-bottom: 1px solid #ccc;
+        color: #669;
+        padding: 6px 8px;
+    }
+    #hor-minimalist-b tbody tr:hover td
+    {
+        color: #009;
+    }
+</style>
+
+<br>
+<br>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-6 column">
+        </div>
+        <div class="col-md-6 column">
+
+            <!--修改信息模态框-->
+            <div class="modal fade" id="modalInfo-container" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">
+                                修改个人信息
+                            </h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="school">请选择所在学校</label>
+                                    <br>
+                                    <select class="btn btn-light btn-lg dropdown-toggle disabled my-1"  title="请选择所在学校" data-live-search="true" id="school" data-size="10">
+                                        <option>暂无</option>
+                                        {% if schoolName == "北京航空航天大学" %}
+                                            <option selected>北京航空航天大学</option>
+                                        {% else %}
+                                            <option>北京航空航天大学</option>
+                                        {% endif %}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="department">请选择所在学院</label>
+                                    <br>
+                                    <select class="btn btn-light btn-lg dropdown-toggle disabled my-1"  title="请选择所在学院" data-live-search="true" id="department" data-size="10">
+                                        <option>暂无</option>
+                                        {% for item in departments %}
+                                            {% if departmentName == item %}
+                                                <option selected>{{item}}</option>
+                                            {% else %}
+                                                <option>{{item}}</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <!--<div class="form-group">-->
+                                    <!--<label for="inputfile">上传头像</label><br>-->
+                                    <!--<input type="file" id="inputfile">-->
+                                <!--</div>-->
+                                <!--<div class="checkbox">-->
+                                <!--<label>-->
+                                <!--<input type="checkbox">确定修改-->
+                                <!--</label>-->
+                                <!--</div>-->
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button> <button type="button" class="btn btn-primary" onclick=Func_saveUserInfo() data-dismiss="modal">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--修改信息模态框-->
+
+    <div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <!--模态框的头部-->
+                    <h4 class="modal-title float-md-none">
+                        <i class="fa fa-pencil"></i>更换头像
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close_modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <!-- 模态框的中部，用于裁剪并显示预览 预览图和裁剪图都是默认隐藏的-->
+                    <p class="tip-info text-center">
+                        未选择图片
+                    </p>
+                    <!--裁剪图片的地方-->
+                    <div class="img-container" style="display: none">
+                        <img src="" alt="" id="photo">
+                    </div>
+                    <!--图片预览的地方-->
+                    <div class="img-preview-box" style="display: none">
+                        <hr>
+                        <span>预览:</span>
+                        <div id="testid" class="img-preview img-preview-md" style="width: 100px;height: 100px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- 模态框的底部，用于选择图片等-->
+                    <div class="container">
+                        <label class="btn mybtn col-md-3" for="photoInput">
+                            <input type="file" class="sr-only" id="photoInput" accept="image/*">
+                                <span>打开图片</span>
+                        </label>
+                        <button class="btn mybtn disabled col-md-2 offset-md-4 mb-2" disabled="true" onclick="sendPhoto();">提交</button>
+                        <button class="btn mybtn col-md-2 mb-2" aria-hidden="true" data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row clearfix">
+        <div class="col-md-4 column">
+            <p class="text-center">
+                <strong>昵称：</strong><strong id="nickName">{{username}}</strong>
+            </p>
+            {% if request.session.username == username %}
+            <p class="text-center column">
+                <button type="button" class="btn btn-primary btn-lg col-md-5 column" data-toggle="modal" data-target="#changeModal" id="show_modal">上传头像</button>
+            </p>
+            {% else %}
+                <br/>
+                <br/>
+            {% endif %}
+            <p class="text-center">
+                <img alt="200x200" width="200" height="200" src={{ img }} class="img-rounded"/>
+            </p>
+            <br>
+            {% if request.session.username == username %}
+            <p class="text-center column">
+                <button class="btn btn-primary btn-lg col-md-5 column" data-toggle="modal" data-target="#modalInfo-container">
+	            修改个人信息
+                </button>
+            </p>
+            {% else %}
+            <br>
+            <br>
+            {% endif %}
+            <p class="text-center" id="schoolName">
+                <strong>学校：{{schoolName}}</strong>
+            </p>
+            <p class="text-center" id="departmentName">
+                <strong>学院：{{departmentName}}</strong>
+            </p>
+        </div>
+        <div class="col-md-8 column">
+            <p class="text-center">
+                <strong>近期点评</strong>
+            </p>
+            <div>
+            <table id="hor-minimalist-b">
+                <colgroup>
+                    <col style="width: 15%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 30%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 15%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 20%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 10%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 10%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                </colgroup>
+                <thead>
+                    <tr><th>时间</th><th>课程</th><th>教师</th><th>评分</th><th>详情</th><th>操作</th></tr>
+                </thead>
+            </table>
+            </div>
+            <div style="height: 200px; overflow-y: scroll">
+            <table id="hor-minimalist-b">
+                <colgroup>
+                    <col style="width: 15%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 30%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 15%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 20%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 10%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 10%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                </colgroup>
+                <tbody>
+                    {% if request.session.username == username %}
+                        {% for item in commentList %}
+                    <tr><td>{{item.time}}</td><td>{{item.course}}</td><td>{{item.teacher}}</td><td>{{item.rate}}</td><td><a href="/course/{{item.courseTeacher}}">详情</a></td><td><button class="btn btn-sm btn-primary" onclick="Func_userDeleteComment('{{item.commentId}}')">删除</button></td></tr>
+                        {% endfor %}
+                    {% else %}
+                        {% for item in commentList %}
+                            <tr><td>{{item.time}}</td><td>{{item.course}}</td><td>{{item.teacher}}</td><td>{{item.rate}}</td><td><a href="/course/{{item.courseTeacher}}">详情</a></td><td></td></tr>
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+            </div>
+            <p></p>
+            <p></p>
+            {% if request.session.username == username %}
+            <p class="text-center">
+                <strong>近期消息</strong>
+            </p>
+            <div>
+            <table id="hor-minimalist-b">
+                <colgroup>
+                    <col style="width: 15%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 20%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 15%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 30%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 10%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 10%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                </colgroup>
+                <thead>
+                    <tr><th>时间</th><th>课程</th><th>教师</th><th>评论内容</th><th>状态</th><th>详情</th></tr>
+                </thead>
+            </table>
+            </div>
+            <div style="height: 200px; overflow-y: scroll">
+            <table id="hor-minimalist-b">
+                <colgroup>
+                    <col style="width: 15%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 20%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 15%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 30%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 10%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                    <col style="width: 10%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;" />
+                </colgroup>
+                <tbody>
+                    {% for item in deleteCommentList %}
+                        <tr><td>{{item.time}}</td><td>{{item.course}}</td><td>{{item.teacher}}</td><td>{{ item.comment_text }}</td><td>{{ item.state }}</td><td>被删除</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+            {% else %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+  <script src="/static/ratemycourse/bootstrap-4.0.0-beta.2-dist/js/bootstrap.bundle.js"></script>
+  <!--<script src="/static/ratemycourse/popper/popper.min.js"></script>-->
+  <script src="/static/ratemycourse/bootstrap-4.0.0-beta.2-dist/js/bootstrap.min.js"></script>
+  <script src="/static/ratemycourse/jquery-validation-1.17.0/dist/jquery.validate.js"></script>
+  <script src="/static/ratemycourse/cropper/cropper.min.js"></script>
+  <script src="/static/ratemycourse/javascript/userInfo.js"></script>
+{% endblock %}

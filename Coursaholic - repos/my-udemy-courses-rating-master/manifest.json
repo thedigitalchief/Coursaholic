@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "My Udemy Courses Rating",
+  "author": "Jesse Chen",
+  "version": "1.0.1",
+  "description": "To view rating quickly!",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.udemy.com/home/my-courses/*"],
+      "js": ["index.js"]
+    }
+  ]
+}

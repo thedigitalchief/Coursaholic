@@ -1,0 +1,13 @@
+.DS_Store
+
+# Compiled python files
+*.pyc
+
+# Vim leftovers
+*.swp
+
+# Our database
+reviews.sqlite
+
+# Email script
+textbookemail.py

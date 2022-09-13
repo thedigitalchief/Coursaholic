@@ -1,0 +1,204 @@
+{% extends '../rateMyCourse/base.html' %}
+{% block title %}课程排名 - {{ block.super }}{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-2 column">
+            <div class="form-group">
+                <br>
+                <br>
+                <hr>
+                评价类型
+                <br>
+                <br>
+                <div class="radio">
+                    <div class="row clearfix">
+                      <label>
+                          <input type="radio" name="Radios" id="radio" value="option1" checked="" > 课程
+                          <br>
+                          <br>
+                          <input type="radio" name="Radios" id="radio" value="option2" > 老师
+                      </label>
+                    </div>
+                </div>
+                <hr>
+                <!--课程类别-->
+                <!--<br>-->
+                <!--<br>-->
+                <!--<select class="btn btn-light btn-sm dropdown-toggle my-1" data-live-search="true" id="type"-->
+                        <!--data-size="10">-->
+                    <!--<option>基础课</option>-->
+                    <!--<li class="divider"></li>-->
+                    <!--<option>数学与自然科学类</option>-->
+                    <!--<option>工程基础类</option>-->
+                    <!--<option>语言类</option>-->
+                    <!--<option>外语类</option>-->
+                    <!--<option>英语分级</option>-->
+                <!--</select>-->
+                <!--<br>-->
+                <!--<select class="btn btn-light btn-sm dropdown-toggle my-1" data-live-search="true" id="type"-->
+                        <!--data-size="10">-->
+                    <!--<option>通识课</option>-->
+                    <!--<li class="divider"></li>-->
+                    <!--<option>核心通识类</option>-->
+                    <!--<option>一般通识类</option>-->
+                    <!--<option>语言类</option>-->
+                    <!--<option>外语类</option>-->
+                    <!--<option>英语分级</option>-->
+                <!--</select>-->
+                <!--<br>-->
+                <!--<select class="btn btn-light btn-sm dropdown-toggle my-1" data-live-search="true" id="type"-->
+                        <!--data-size="10">-->
+                    <!--<option>专业课</option>-->
+                    <!--<li class="divider"></li>-->
+                    <!--<option>核心专业类</option>-->
+                    <!--<option>一般专业类</option>-->
+                <!--</select>-->
+
+            </div>
+
+        </div>
+        <div class="col-md-10 column">
+            <br>
+            <!--<div class="row clearfix">-->
+                <!--<div class="col-md-12 column">-->
+                    <!--<ul class="text-right">-->
+                        <!--<button type="button" class="btn btn-sm btn-primary">按评分排序</button>-->
+                        <!--<button type="button" class="btn btn-sm btn-primary">按热度排序</button>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <table class="table text-center" style="table-layout: fixed;" name="top_courses" id="top_courses">
+                <thead>
+                <tr>
+                    <th onclick = "sortTable('top_courses', 0, 'string');" width="35%" style='vertical-align: middle;text-align: left; text-overflow: ellipsis;overflow: hidden;white-space: nowrap;cursor:pointer'>课程名称</th>
+                    <th onclick = "sortTable('top_courses', 1, 'string');" width="10%" style='vertical-align: middle;text-align: left; text-overflow: ellipsis;overflow: hidden;white-space: nowrap;cursor:pointer'>授课教师</th>
+                    <th onclick = "sortTable('top_courses', 2, 'float');" width="8%" style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; cursor:pointer'>作业量</th>
+                    <th onclick = "sortTable('top_courses', 3, 'float');" width="8%" style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; cursor:pointer'>难度</th>
+                    <th onclick = "sortTable('top_courses', 4, 'float');" width="8%" style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; cursor:pointer'>知识量</th>
+                    <th onclick = "sortTable('top_courses', 5, 'float');" width="8%" style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; cursor:pointer'>满意度</th>
+                    <th onclick = "sortTable('top_courses', 6, 'int');" width="10%" style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; cursor:pointer'>评价次数</th>
+                    <th onclick = "sortTable('top_courses', 7, 'float');" width="13%" style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; cursor:pointer'>综合评分</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for course in top_courses %}
+                <tr>
+                    <td width="35%" style='vertical-align: middle;text-align: left;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        <a title={{course.courseName}} href="/course/{{course.courseTeacherId}}/">{{course.courseName}}</a>
+                    </td>
+                    <td width="10%" rowspan=$rowspan style='vertical-align: middle;text-align: left;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        <a href="/teacher/{{course.teacherId}}/">{{course.teacherName}}</a>
+                    </td>
+                    <td width="8%" rowspan=$rowspan style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        {{course.score.s1}}
+                    </td>
+                    <td width="8%" rowspan=$rowspan style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        {{course.score.s2}}
+                    </td>
+                    <td width="8%" rowspan=$rowspan style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        {{course.score.s3}}
+                    </td>
+                    <td width="8%" rowspan=$rowspan style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        {{course.score.s4}}
+                    </td>
+                    <td width="10%" rowspan=$rowspan style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        {{course.score.c}}
+                    </td>
+                    <td width="13%" rowspan=$rowspan style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        {{course.avgScore}}
+                    </td>
+                </tr>
+                {% endfor%}
+                </tbody>
+            </table>
+            <table class="table text-center" style="table-layout: fixed;" name="top_teachers" id="top_teachers">
+                <thead>
+                <tr>
+                    <th onclick = "sortTable('top_teachers', 0, 'string');" width="45%" style='vertical-align: middle;text-align: left;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; cursor:pointer'>授课教师</th>
+                    <th onclick = "sortTable('top_teachers', 1, 'float');" width="8%" style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; cursor:pointer'>作业量</th>
+                    <th onclick = "sortTable('top_teachers', 2, 'float');" width="8%" style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; cursor:pointer'>难度</th>
+                    <th onclick = "sortTable('top_teachers', 3, 'float');" width="8%" style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; cursor:pointer'>知识量</th>
+                    <th onclick = "sortTable('top_teachers', 4, 'float');" width="8%" style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; cursor:pointer'>满意度</th>
+                    <th onclick = "sortTable('top_teachers', 5, 'int');" width="10%" style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; cursor:pointer'>评价次数</th>
+                    <th onclick = "sortTable('top_teachers', 6, 'float');" width="13%" style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; cursor:pointer'>综合评分</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for teacher in top_teachers %}
+                <tr>
+                    <td width="45%" rowspan=$rowspan style='vertical-align: middle;text-align: left;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        <a href="/teacher/{{teacher.teacherId}}/">{{teacher.teacherName}}</a>
+                    </td>
+                    <td width="8%" rowspan=$rowspan style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        {{teacher.score.s1}}
+                    </td>
+                    <td width="8%" rowspan=$rowspan style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        {{teacher.score.s2}}
+                    </td>
+                    <td width="8%" rowspan=$rowspan style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        {{teacher.score.s3}}
+                    </td>
+                    <td width="8%" rowspan=$rowspan style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        {{teacher.score.s4}}
+                    </td>
+                    <td width="10%" rowspan=$rowspan style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        {{teacher.score.c}}
+                    </td>
+                    <td width="13%" rowspan=$rowspan style='vertical-align: middle;text-align: center;text-overflow: ellipsis;overflow: hidden;white-space: nowrap'>
+                        {{teacher.avgScore}}
+                    </td>
+                </tr>
+                {% endfor%}
+                </tbody>
+            </table>
+            <!--<hr>-->
+            <!--<p>-->
+            <!--<h4>{{course_name}} {{teacher_name}}</h4>-->
+            <!--</p>-->
+            <!--<p>-->
+                <!--{{feature1}} {{feature2}}-->
+            <!--</p>-->
+            <!--<hr>-->
+            <!--<nav aria-label="Page navigation">-->
+                <!--<ul class="pagination justify-content-center">-->
+                    <!--<li class="page-item disabled">-->
+                        <!--<a class="page-link" href="#" tabindex="-1">Previous</a>-->
+                    <!--</li>-->
+                    <!--<li class="page-item"><a class="page-link" href="#">1</a></li>-->
+                    <!--<li class="page-item"><a class="page-link" href="#">2</a></li>-->
+                    <!--<li class="page-item"><a class="page-link" href="#">3</a></li>-->
+                    <!--<li class="page-item">-->
+                        <!--<a class="page-link" href="#">Next</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</nav>-->
+        </div>
+    </div>
+    <!--<div class="row clearfix">-->
+        <!--<div class="col-md-12 column">-->
+            <!--<nav aria-label="Page navigation">-->
+            <!--<ul class="pagination justify-content-center">-->
+            <!--<li class="page-item disabled">-->
+            <!--<a class="page-link" href="#" tabindex="-1">Previous</a>-->
+            <!--</li>-->
+            <!--<li class="page-item"><a class="page-link" href="#">1</a></li>-->
+            <!--<li class="page-item"><a class="page-link" href="#">2</a></li>-->
+            <!--<li class="page-item"><a class="page-link" href="#">3</a></li>-->
+            <!--<li class="page-item">-->
+            <!--<a class="page-link" href="#">Next</a>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</nav>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="/static/ratemycourse/bootstrap-4.0.0-beta.2-dist/js/bootstrap.bundle.js"></script>
+<!--<script src="../../static/ratemycourse/popper/popper.min.js"></script>-->
+<script src="/static/ratemycourse/bootstrap-4.0.0-beta.2-dist/js/bootstrap.min.js"></script>
+<script src="/static/ratemycourse/jquery-validation-1.17.0/dist/jquery.validate.js"></script>
+<script src="/static/ratemycourse/javascript/rankPage.js"></script>
+{% endblock %}
