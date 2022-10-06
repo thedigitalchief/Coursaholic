@@ -918,7 +918,7 @@ var app = (function () {
             c() {
                 (n = x("div")),
                     (s = x("span")),
-                    (s.textContent = "UCR Current term:"),
+                    (s.textContent = "UC Riverside current term:"),
                     (i = z()),
                     q && q.c(),
                     (a = z()),
@@ -943,7 +943,7 @@ var app = (function () {
                     (O = x("hr")),
                     (j = z()),
                     (I = x("h1")),
-                    (I.textContent = "Coursaholic - The best course reviews and planner. "),
+                    (I.textContent = "Automated college scheduler & course reviews"),
                     (Z = z()),
                     (T = x("footer")),
                     (U = x("span")),
