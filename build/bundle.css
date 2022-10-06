@@ -1,6 +1,7 @@
 .svelte-wqrz4a {
 	text-align: center;
-	transition: 0.25s
+	transition: 0.25s;
+	background: url("Animated Shape.svg");
 }
 
 body.light.svelte-wqrz4a {
@@ -26,8 +27,8 @@ div.svelte-1iveuxb {
 
 h1.svelte-1iveuxb {
 	max-width: 90%;
-	font-weight: 850;
-	font-size: 1.6em;
+	font-weight: 500;
+	font-size: 2.3em;
 	margin: 1.8em auto
 
 }
@@ -35,9 +36,13 @@ h1.svelte-1iveuxb {
 span.svelte-1iveuxb {
 	justify-content: center;
 	text-align: center;
-	font-size: 1.5em;
-	font-weight: 550;
+	font-size: 1.7em;
+	font-weight: 650;
 	margin-top: 0.9em
+}
+
+span.svelte-1iveuxb:hover {
+	color: #064189;
 }
 
 .toggle.svelte-1iveuxb {
@@ -751,6 +756,7 @@ h3.svelte-jytgrh {
 	color: var(--gray0)
 }
 
+
 .card.svelte-jytgrh::after {
 	clear: both;
 	display: block
@@ -785,8 +791,20 @@ p.svelte-jytgrh {
 }
 
 .font.svelte-jytgrh {
-	font-size: 16px;
+	font-size: 18px;
+}
 
+span.font.svelte-jytgrh {
+	font-size: 20px;
+	font-weight: 650;
+}
+
+span.font.svelte-jytgrh:hover {
+	color: #0b2b81;
+	font-weight: 800;
+	transition: 0.4s ease-out 0.2s;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
 }
 
 p.font.svelte-jytgrh {
@@ -907,7 +925,7 @@ svelte-virtual-list-viewport.svelte-1jpk03l::-webkit-scrollbar-thumb {
 }
 
 .modal.svelte-1sqbfhv {
-	border-radius: 5rem;
+	border-radius: 2.2rem;
 	visibility: visible;
 	box-shadow: 0 10px 50px 0 rgb(0 0 0 / 50%);
 	padding: 10px;
