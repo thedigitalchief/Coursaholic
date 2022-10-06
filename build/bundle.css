@@ -1,6 +1,7 @@
 .svelte-wqrz4a {
 	text-align: center;
-	transition: 0.25s
+	transition: 0.25s;
+	background: url("Animated Shape.svg");
 }
 
 body.light.svelte-wqrz4a {
