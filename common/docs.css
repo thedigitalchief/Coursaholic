@@ -4,11 +4,12 @@
 }
 
 head {
-	background: ;
+	background: url("Microchip\ tech\ background.png");
 }
 
 /* basic global layout */
 body{
+	background: url("Microchip\ tech\ background.png");
 	margin:0px; 
 	padding:0px;
 	font-size:13.5px;

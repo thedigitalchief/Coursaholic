@@ -1,7 +1,7 @@
 .svelte-wqrz4a {
 	text-align: center;
 	transition: 0.25s;
-	background: url("Animated Shape.svg");
+	background: url("./Microchip tech background.png");
 }
 
 body.light.svelte-wqrz4a {
@@ -12,6 +12,7 @@ body.light.svelte-wqrz4a {
 body.dark.svelte-wqrz4a {
 	background-color: var(--gray4);
 	color: var(--gray0)
+	
 }
 
 @media(min-width: 640px) {
